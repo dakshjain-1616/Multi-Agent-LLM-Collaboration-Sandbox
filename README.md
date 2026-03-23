@@ -1,21 +1,15 @@
 [![Try NEO in VS Code](https://img.shields.io/badge/VS%20Code-Try%20NEO-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=NeoResearchInc.heyneo)
-<div align="center">
+[![Built autonomously using NEO](https://img.shields.io/badge/Built%20with-NEO%20Autonomous%20AI-blueviolet?style=flat-square)](https://heyneo.so)
+[![Python](https://img.shields.io/badge/python-3.10+-blue?style=flat-square)](https://python.org)
+[![Gradio](https://img.shields.io/badge/gradio-5.x-orange?style=flat-square)](https://gradio.app)
+[![Tests](https://img.shields.io/badge/tests-65%20passing-brightgreen?style=flat-square)](#running-tests)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
 # 🤖 Multi-Agent LLM Collaboration Sandbox
 
 > Built autonomously using [NEO](https://heyneo.so) — your autonomous AI Agent
 
 **Orchestrate multiple AI agents. Watch them debate, plan, create, and think — together.**
-
-[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://python.org)
-[![Gradio](https://img.shields.io/badge/gradio-4.0+-orange.svg)](https://gradio.app)
-[![OpenRouter](https://img.shields.io/badge/OpenRouter-compatible-green.svg)](https://openrouter.ai)
-[![Tests](https://img.shields.io/badge/tests-65%20passing-brightgreen.svg)]()
-[![Built by NEO](https://img.shields.io/badge/built%20by-NEO%20AI-purple.svg)](https://heyneo.so)
-
-*Autonomously built by [NEO](https://heyneo.so) — your autonomous AI software engineer.*
-
-</div>
 
 ---
 
@@ -43,8 +37,8 @@ A Gradio web app where you define agents with unique roles, models, and personas
 ## 🚀 Quick Start
 
 ```bash
-git clone <repo>
-cd multi-agent-sandbox
+git clone https://github.com/dakshjain-1616/-Multi-Agent-LLM-Collaboration-Sandbox
+cd -Multi-Agent-LLM-Collaboration-Sandbox
 pip install -r requirements.txt
 cp .env.example .env       # add your OPENROUTER_API_KEY
 python app.py              # open http://localhost:7860
@@ -236,15 +230,10 @@ Gradio UI (app.py)
 
 The Gradio UI holds one `AgentOrchestrator` per session in Gradio `State`. The `on_start` handler runs agent turns one at a time and yields UI updates after each, giving a live streaming effect. Checkpoints serialise the full orchestrator state (agents + history + summary) to JSON and restore it via `AgentOrchestrator.load_checkpoint()`.
 
-## 🤖 Built by NEO
-
-This project was autonomously designed, coded, tested, and documented by
-**[NEO](https://heyneo.so)** — an autonomous AI software engineer that turns ideas
-into production-ready projects without human intervention.
-
-> "From idea to working software, automatically."
-> — [heyneo.so](https://heyneo.so)
-
 ## 📄 License
 
 MIT
+
+---
+
+_Built autonomously using [NEO](https://heyneo.so) — your autonomous AI Agent_
