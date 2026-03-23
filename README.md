@@ -3,6 +3,8 @@
 
 # 🤖 Multi-Agent LLM Collaboration Sandbox
 
+> Built autonomously using [NEO](https://heyneo.so) — your autonomous AI Agent
+
 **Orchestrate multiple AI agents. Watch them debate, plan, create, and think — together.**
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://python.org)
