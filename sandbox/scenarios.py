@@ -1,7 +1,10 @@
 """Preset scenario definitions for multi-agent collaboration."""
 
+import os
 from dataclasses import dataclass, field
 from typing import Dict, List
+
+_DEFAULT_MODEL = os.environ.get("DEFAULT_MODEL", "deepseek/deepseek-chat")
 
 
 @dataclass
@@ -30,7 +33,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "Present strong arguments, cite reasoning and evidence, and rebut "
                     "counterarguments thoughtfully. Keep responses concise (3-5 sentences)."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "Skeptic",
@@ -39,7 +42,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "Challenge assumptions, point out flaws in reasoning, and present "
                     "alternative perspectives. Keep responses concise (3-5 sentences)."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "Moderator",
@@ -48,7 +51,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "identify areas of agreement and disagreement, and pose a follow-up "
                     "question to deepen the discussion. Keep responses concise."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
         ],
         initial_prompt="Topic: Should artificial intelligence be regulated by governments?",
@@ -69,7 +72,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "decisions, respond to feedback, and propose revisions. Be receptive "
                     "to critique and ask clarifying questions when needed."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "SecurityReviewer",
@@ -78,7 +81,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "Focus on injection risks, authentication flaws, data exposure, and "
                     "insecure dependencies. Provide specific, actionable recommendations."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "PerformanceReviewer",
@@ -87,7 +90,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "memory leaks, unnecessary I/O, and scalability bottlenecks. Suggest "
                     "concrete optimisations with trade-off analysis."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
         ],
         initial_prompt=(
@@ -112,7 +115,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "compelling story beats, introduce conflict and tension, and ensure "
                     "the plot has momentum. Write 2-3 sentences advancing the story."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "CharacterWriter",
@@ -121,7 +124,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "and relationships. Write dialogue and internal thoughts that reveal "
                     "personality. Add 2-3 sentences from a character's perspective."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "WorldBuilder",
@@ -130,7 +133,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "details, lore, and atmosphere. Ground each scene in a specific place "
                     "and time. Add 2-3 sentences of descriptive world detail."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
         ],
         initial_prompt=(
@@ -155,7 +158,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "dependencies and risks, estimate complexity, and propose implementation "
                     "approaches. Be specific about technical constraints."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "ProductManager",
@@ -164,7 +167,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "manage scope, and keep the discussion focused on business outcomes. "
                     "Ask clarifying questions about user needs and success metrics."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "RiskAnalyst",
@@ -173,7 +176,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "and mitigation strategies. Think about what could go wrong and propose "
                     "contingency plans. Be systematic and thorough."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
         ],
         initial_prompt=(
@@ -197,7 +200,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "without self-censoring. Quantity over quality — the more surprising the better. "
                     "List 3-5 distinct ideas per response, each in one sentence."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "CriticFilter",
@@ -206,7 +209,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "feasibility (can it be built?) and novelty (is it truly new?). Keep only the "
                     "best 3 ideas, explaining briefly why each survives the cut."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "Synthesiser",
@@ -215,7 +218,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "into one coherent, actionable proposal. Describe the combined concept, its "
                     "core value proposition, and a first concrete step to prototype it."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
         ],
         initial_prompt="Brainstorm innovative solutions for reducing urban food waste using AI.",
@@ -235,7 +238,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "assumptions, challenge definitions, and push the Responder to think more "
                     "deeply. Ask one focused question per turn — never assert, only question."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
             {
                 "name": "Responder",
@@ -244,7 +247,7 @@ SCENARIOS: Dict[str, Scenario] = {
                     "Questioner's questions carefully, and be willing to revise or abandon your "
                     "position when a question reveals a flaw in your reasoning."
                 ),
-                "model": "deepseek/deepseek-chat",
+                "model": _DEFAULT_MODEL,
             },
         ],
         initial_prompt="Let's explore: Is free will compatible with a deterministic universe?",
