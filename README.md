@@ -37,8 +37,8 @@ A Gradio web app where you define agents with unique roles, models, and personas
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/dakshjain-1616/-Multi-Agent-LLM-Collaboration-Sandbox
-cd -Multi-Agent-LLM-Collaboration-Sandbox
+git clone https://github.com/dakshjain-1616/Multi-Agent-LLM-Collaboration-Sandbox
+cd Multi-Agent-LLM-Collaboration-Sandbox
 pip install -r requirements.txt
 cp .env.example .env       # add your OPENROUTER_API_KEY
 python app.py              # open http://localhost:7860
